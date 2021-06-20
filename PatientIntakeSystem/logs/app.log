@@ -1,0 +1,5 @@
+09:39:54.124 [restartedMain] INFO  c.p.PatientIntakeSystemApplication - Starting PatientIntakeSystemApplication using Java 16 on LAPTOP-KCP96E0Q with PID 21056 (C:\Users\91861\Dropbox\Handson\PatientIntakeSystem\target\classes started by trinzya in C:\Users\91861\Dropbox\Handson\PatientIntakeSystem)
+09:39:54.130 [restartedMain] INFO  c.p.PatientIntakeSystemApplication - No active profile set, falling back to default profiles: default
+09:39:56.670 [restartedMain] INFO  c.p.PatientIntakeSystemApplication - Started PatientIntakeSystemApplication in 3.437 seconds (JVM running for 4.207)
+09:39:56.676 [restartedMain] INFO  c.patientintakesystem.ClinicCalendar - In Main
+09:39:56.677 [restartedMain] INFO  c.patientintakesystem.ClinicCalendar - Welcome to Patient Intake Stystem
