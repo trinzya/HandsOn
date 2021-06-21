@@ -1,0 +1,6 @@
+projectKey=FlightManagement
+serverUrl=http://localhost:9000
+serverVersion=8.9.1.44547
+dashboardUrl=http://localhost:9000/dashboard?id=FlightManagement
+ceTaskId=AXoqSY6FY15__nYljTq_
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AXoqSY6FY15__nYljTq_
