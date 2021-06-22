@@ -17,7 +17,7 @@ public class ClinicCalendar {
 	
 	private static List<PatientAppointment> pList = new ArrayList<PatientAppointment>();
 	
-	
+	//The function to  add the new appointment into the list.
 	public  void addAppointment(PatientAppointment p) {
 		pList.add(p);
 		LOGGER.info("Appointent Added for patient {}",p.getName());
@@ -25,6 +25,7 @@ public class ClinicCalendar {
 		
 	} 
 	
+	//The function to  remove the  appointment from the list.
 	public  void removeAppointment(PatientAppointment p) {
 		pList.remove(p);
 		LOGGER.info("Appointent removed for patient {}",p.getName());
@@ -32,6 +33,7 @@ public class ClinicCalendar {
 		
 	} 
 	
+	//The function to  get the lsit all the appointment .
 	public static  List<PatientAppointment> viewAllAppointment() { 
 		LOGGER.info("appointemnt={}", pList);
 
