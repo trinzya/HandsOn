@@ -1,5 +1,6 @@
 package com.TraineeManager.Dao;
 
+//import necessary packages
 import java.text.SimpleDateFormat;
 
 
@@ -34,6 +35,10 @@ private CohortRepoImpl cohortRepo;
 @Autowired
 private TraineeRepoImpl traineeRepo;
 	
+	
+	//This function is used to add the trainee to the database. 
+	//This function interacts with the user asks for the required details , performs the vaildation checks if validation fails asks the user to again starts the process.
+	//if everything works fine it gets the trainee added to the database
 	public String addTrainee() throws InvalidTraineeDataException {
 		 SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 
@@ -84,7 +89,8 @@ private TraineeRepoImpl traineeRepo;
 	
 	
 	}
-	
+	//This function is used to remove the trianee from the database.
+	//It interacts with user asks for the necessary information if the information is vailadte and correct then trainee gets removed.
 	public String removeTrainee() {
 		Scanner sc = new Scanner(System.in);
 		while(true) {
@@ -101,6 +107,8 @@ private TraineeRepoImpl traineeRepo;
 		}
 	}
 	
+	//This function is used to get all the trainee of the particular cohort from the database.
+	//It interacts with user asks for the necessary information((cohort id) ) if the information is vailadte and correct the list gets displayed.
 	public String getAllTraineefromCohort(){
 		Scanner sc = new Scanner(System.in);
       while(true) {
@@ -120,6 +128,10 @@ private TraineeRepoImpl traineeRepo;
 	}
 	}
 	
+	
+	
+	//This function is used to check whether  the trainee  is in a particular cohort or not of the particular cohort from the database.
+	//It interacts with user asks for the necessary information((cohort id and the trainee name(whcih need to be checked) ) ) if the information(cohort id) is vailadte and correct the result gets displayed.
 	public String  findByNameInCohort() {
 		Scanner sc = new Scanner(System.in);
 	      while(true) {
@@ -143,6 +155,10 @@ private TraineeRepoImpl traineeRepo;
 	      }
 	}
 
+	
+	
+	//This function is used to add a particular  trainee to the particular cohort from the database.
+	//It interacts with user asks for the necessary information((cohort id, trainee employee id ) ) if the information is vailadte and correct the trainee gets added.
 	@Override
 	public String addTraineeToCohort()  {
 	

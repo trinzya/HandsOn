@@ -1,5 +1,6 @@
 package com.TraineeManager.Repository;
 
+//import necessary packages
 import java.util.List;
 
 
@@ -22,6 +23,7 @@ public class CohortRepoImpl {
 	@Autowired
 	private CohortRepo repo;
 	
+	//This fucntion is used to store  the cohort in the database.
 	public  String  createCohort(Cohort p ) {
 		repo.saveAndFlush(p);
 		
@@ -33,7 +35,7 @@ public class CohortRepoImpl {
 	
 
 	
-	
+	//This is function is used to get all Cohort from the database.
 	public  List<Cohort>  getAllCohort(){  
 		System.out.println("hello");
 		System.out.println("x"+repo.findAll());
@@ -41,6 +43,7 @@ public class CohortRepoImpl {
 		
 	}
 	
+	//This is function is used to get particular Cohort from the database based on the "id" which is aprimary key.
 	public  Cohort getCohortById(String id) {
 		Optional<Cohort> result = repo.findById(id);
 		if(result.isPresent()) {
@@ -59,6 +62,9 @@ public class CohortRepoImpl {
 		
 		
 	} 
+	
+	
+	//This is function is used to gremove particular Cohort from the database based on the "id" which is aprimary key.
 	public  String removeCohort(String id) {
 		
 		Optional<Cohort> result = repo.findById(id);
@@ -78,6 +84,9 @@ public class CohortRepoImpl {
 		
 	}  
 	
+	
+	//The function is used to get all the trianees from a particular cohort.
+	//We get a Particular cohort based on the "id"
 	public List<Trainee>  getAllTrainee(String id){
 		Optional<Cohort> result = repo.findById(id);
 		if(result.isPresent()) {
@@ -91,6 +100,7 @@ public class CohortRepoImpl {
 			
 		
 	} 
+	//The function is used the values of the cohort.
 	public  String updateCohort(Cohort s) { 
 		/*
 		 * Optional<Flight> op = repo.findById(s.getId()); if(op.isPresent()) { Flight
@@ -109,6 +119,8 @@ public class CohortRepoImpl {
 		
 	}
 	
+	
+	//This which is used to check if the particular trainee with "name" exists in a cohort with "id"
 	public boolean getAllTraineeByName(String id,String name){
 		Optional<Cohort> result = repo.findById(id);
 		if(result.isPresent()) {
@@ -128,6 +140,10 @@ public class CohortRepoImpl {
 		
 	} 
 	
+	
+	//This function is used to add the trainees to the a particular cohort.
+	//The "id" is used  to get the particular cohort.
+	//The trainee t is aprticular trainee which we need to add
 	public String addTraineetoCohort(String id , Trainee t)  throws InvalidTraineeException{ 
 		Optional<Cohort> c=repo.findById(id);
 		

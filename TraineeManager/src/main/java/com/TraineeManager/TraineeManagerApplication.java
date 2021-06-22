@@ -23,7 +23,8 @@ import com.TraineeManager.Exception.InvalidTraineeDataException;
 public class TraineeManagerApplication {
 	
 	
-
+	//The function decides the flow of the application. 
+	//The mneu is diplayed to the user (As mention in the document) , the user enters the choice of the task to be executed and according the operations are performed.
 	public static void main(String[] args) {
 		ApplicationContext  con = SpringApplication.run(TraineeManagerApplication.class, args);
 		TraineeDao tService =  con.getBean("traineeDaoImpl",TraineeDaoImpl.class);

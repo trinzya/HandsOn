@@ -17,7 +17,7 @@ public class TraineeRepoImpl  {
 	@Autowired
 	private CohortRepoImpl cohortRepoImpl;
 	
-	
+	//This is to used to store a trainee object in the database
 	public  String  createTrainee(Trainee p ) {
 		repo.saveAndFlush(p);
 		
@@ -29,17 +29,19 @@ public class TraineeRepoImpl  {
 	
 
 	
-	
+	//This is to used to get all the trainees from  the database
 	public  List<Trainee>  getAllTrainee(){ 
 		
 		return repo.findAll();
 		
 	}
-	
+	//This is to used to get all the trainees from  the database filter by traineeName 
 	public  List<Trainee> getTraineeBytraineeName(String traineeName) {
 	 return repo.findByName(traineeName);
 		
 	} 
+	
+	//This object is used to remove the trainee from the databased on the "id" which is the primary key.
 	public  String removeTrainee(int id) {
 		
 		Optional<Trainee> result = repo.findById(id);
@@ -65,7 +67,7 @@ public class TraineeRepoImpl  {
 		
 	}
 	
-	
+	//This function returns the Trainee who has the paticular "id"
 	public Trainee getById(int id)
 	{Optional<Trainee> result = repo.findById(id);
 	if(result.isPresent()) 

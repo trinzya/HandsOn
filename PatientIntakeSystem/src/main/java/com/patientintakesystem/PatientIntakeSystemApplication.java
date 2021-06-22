@@ -15,6 +15,10 @@ import java.util.*;
 public class PatientIntakeSystemApplication { 
 	private static final Logger LOGGER = LoggerFactory.getLogger(ClinicCalendar.class);
 	
+	//The function used to add appointment to the user .
+	//It take necessary information from the user and and form various chekcs on the information if everything is right appoitment gets added to the clinicCalendar )
+	//if the user has enter doctor name which is not in the list it will throw an DoctorNotFoundException
+	//if the user has entered past date it will throw PastDateException 
 	public static String addAppointment() throws DoctorNotFoundException , PastDateException {
 		Scanner sc = new Scanner(System.in);
 	
@@ -84,13 +88,17 @@ public class PatientIntakeSystemApplication {
 			
 	
 	}
+	
+	//This function is used to view all the appointments
 	public static 	List<PatientAppointment> viewAllApointment() {
 		ClinicCalendar c = new ClinicCalendar();
 	List<PatientAppointment>	pList=ClinicCalendar.viewAllAppointment();
 	return pList;
 		
 	}
-
+	//This the main function. 
+	//It first display the menu drop down whetehr user want to add the appointment or view all the appointment or simply exit from the application.
+	//Depending upon the choice the application flows is decided
 	public static void main(String[] args) {
 		SpringApplication.run(PatientIntakeSystemApplication.class, args); 
 	
