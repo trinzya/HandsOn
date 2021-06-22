@@ -64,6 +64,7 @@ public class FlightService {
 		}
 	}
 	
+	//The function is used to update information about  the exsisting flight.
 	public  String updateFlight(Flight s) { 
 		/*
 		 * Optional<Flight> op = repo.findById(s.getId()); if(op.isPresent()) { Flight
@@ -81,7 +82,7 @@ public class FlightService {
 		}
 		
 	}
-		
+		// This function is used to add the passenger in a particular flight obj.
 		public  String addPassenger(Flight f, Passenger p) {
 			
 		if(	f.getFlightType().equalsIgnoreCase("Economy")) {
@@ -105,7 +106,7 @@ public class FlightService {
 		}
 			
 		}
-		
+		// This function is used to remove the passenger in a particular flight obj.
 		public  String removePassenger(Flight f, Passenger p) {
 			
 		
@@ -124,12 +125,13 @@ public class FlightService {
 		
 			
 		} 
-		
+		// This function is used to get all the passenger in a particular flight obj.
 		public List<Passenger>  getAllPassenger(String id){
 			Flight f = getFlightById(id);
 		return	f.getPassengers();
 		}
 		
+		// This function is used to get all the flight flitered by flight type.
 		public List<Flight>  getAllByFlightType(String type){
 			return flightrepo.findByFlightType(type);
 		}
