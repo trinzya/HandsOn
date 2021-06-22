@@ -1,5 +1,5 @@
 package com.cognizant.flightmanagement.serivce;
-
+//import necessary packages
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +22,7 @@ public class PassengerService {
 	@Autowired 
 	private FlightService flightService;
 	
+	//This function is used to store the passenger in the database.
 	public  String  createPassenger(Passenger p ) {
 		passengerrepo.saveAndFlush(p);
 		PassengerService.count=PassengerService.count+1;
@@ -33,20 +34,23 @@ public class PassengerService {
 	
 
 	
-	
+	//The function is used to get All the passengers from the database
 	public  List<Passenger>  getAllPassenger(){ 
 		
 		return passengerrepo.findAll();
 		
 	}
 	
-	
+	//The function is used to get All the passengers from the database filter by vip column
 	public  List<Passenger>  getAllVipPassenger(boolean vip){ 
 		
 		return passengerrepo.findByVip(vip);
 		
 	}
 	
+	//The function is used to get a particular passenger from the database using the primary key "id".
+	//It check if the passenger with a particualr id is there or not.
+	//if the passenger is avialable it return the passenger object otherwise return null;
 	public  Passenger getPassengerById(String id) {
 		Optional<Passenger> result = passengerrepo.findById(id);
 		if(result.isPresent()) {
@@ -57,14 +61,17 @@ public class PassengerService {
 			return null;
 		}
 	} 
+	
+	//The function is used t remove a particular Passenger.
+	// Its  get a particular passenger from the database using the primary key "id".
+	//It check if the passenger is store in the database or not.
+	//if the passenger is avialable it gets deleted.;
 	public  String removePassenger(String id) {
 		
 		Optional<Passenger> result = passengerrepo.findById(id);
 		if(result.isPresent()) {
 		List<Flight> list=	flightService.getAllFlight();
-		for (Flight f: list) {
-			
-		}
+		
 			
 			
 			
