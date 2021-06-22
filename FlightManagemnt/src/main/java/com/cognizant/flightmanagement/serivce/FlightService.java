@@ -1,5 +1,6 @@
 package com.cognizant.flightmanagement.serivce;
 
+//import necessary packages
 import java.util.List;
 import java.util.Optional;
 
@@ -16,8 +17,9 @@ public class FlightService {
 	@Autowired
 	private IFlightRepository flightrepo; 
 	
-	public  static final int maxFlightPassenger =5;
+	//public  static final int maxFlightPassenger =5;
 	
+	//The function is used to save the flight object in the database
 	public String createFlight(Flight f) {
 		flightrepo.saveAndFlush(f);
 		return "Flight Created";
@@ -25,14 +27,16 @@ public class FlightService {
 	} 
 	
 	
-
+	//The function is used to get All the flights from the database
      public  List<Flight>  getAllFlight(){
 		return flightrepo.findAll();
 		
 	}
 	
 	
-	
+	//The function is used to get a particular flight from the database using the primary key "id".
+	//It check if the flight is avialable or not.
+	//if the flights is avialable it return the flight object otherwise return null;
 	public Flight getFlightById(String id) {
 		Optional<Flight>  result = flightrepo.findById(id);
 		if(result.isPresent())
@@ -45,6 +49,10 @@ public class FlightService {
 		
 	}
 	
+	//The function is used t remove a particular Flight.
+	// Its  get a particular flight from the database using the primary key "id".
+	//It check if the flight is avialable or not.
+	//if the flights is avialable it gets deleted.;
 	public  String removeFlight(String id) {
 		Optional<Flight> op = flightrepo.findById(id);
 		if(op.isPresent()) {
