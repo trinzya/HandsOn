@@ -2,7 +2,7 @@
 Cognizant Handson   
 
 
-Case Study - Flight Management :
+# Case Study - Flight Management :
 
 Technology Used:
 Spring-boot (mvc) 
@@ -53,6 +53,52 @@ iii) Has functionality of view all  pasengers in  a particular flight.
 
 8.View All Non-Vip Passengers
 
-Sonar - Analysis (Passed):
 
-![sonar_flight](https://user-images.githubusercontent.com/59994401/122683912-dee06880-d21f-11eb-9a92-dae93130b7c9.png)
+
+# Case Study Patient Intake System
+
+ The application uses console input and output to communicate with the user, this has a main menu with 2 subsystems
+
+a. Add a patient appointment
+
+b. View all appointments
+
+
+
+# Case Study TraineeMamger
+
+The purpose of the application is to manage a list of trainees based on their cohort code. This will be a menu driven console application which will have the following options
+
+a. Register trainee: add a new trainee to the repository
+
+b. Remove trainee: remove an existing trainee from the repository
+
+c. Find by name: find if a trainee is present under the cohort
+
+d. Find all: find all trainees in a cohort
+
+
+Data validation constraints
+
+1. Make sure email is in correct format
+
+2. The name fields cannot have numeric data
+
+3. Empid has to have 6 numbers
+
+4. Cohort code should be in the following format, AAAXXAAXX, A is for alphabet and X is for number
+
+
+
+#  Handson-56 
+This is the Hands-on of day 56 
+It executes various queries and fucntalities has mentioned in the document
+
+
+#  Handson-57
+This is the Hands-on of day 56 
+It executes various queries and fucntalities has mentioned in the document
+
+ormlearn - This project performs all the queries of the stock database. (As mentioned in the document)
+
+payroll - This project performs all the queries of the payroll databsase(Employee, department and skill) . [As mentioend in the document] 
