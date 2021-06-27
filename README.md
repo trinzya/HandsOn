@@ -102,3 +102,40 @@ It executes various queries and fucntalities has mentioned in the document
 ormlearn - This project performs all the queries of the stock database. (As mentioned in the document)
 
 payroll - This project performs all the queries of the payroll databsase(Employee, department and skill) . [As mentioend in the document] 
+
+# Practice Check (TruYum)
+
+Technology Used:
+Spring-boot (mvc) 
+Hibernate (jpa)
+Html (FrontEnd)
+CSS(Front End)
+
+Run On port number: 8080
+Databse design - 
+user - cart (one to one relation) (one user can have one cart)
+cart-menuitem -(many to many relation ) ( because many carts can have many menu items )
+Schema and tables - Created by Hibernate 
+
+Operations -Customer:
+
+1.-Register a new user
+2-Login  in into the website
+3-logout  from the website
+4-To view list of menuItems 
+5-To view Cart
+6- To add a menu-item to the cart 
+7- To delete a menu item from cart
+
+
+
+Operations -Admin:
+
+
+1-Login  in into the website
+2-logout  from the website
+3-To view list of menuItems 
+4-To edit a menuItem
+
+Note - The list of menuitems are instered directly from backend (directly from sql workbecnh) 
+        Values insert is in file truyum-data.sql( folder sql/truyum-data.sql)
